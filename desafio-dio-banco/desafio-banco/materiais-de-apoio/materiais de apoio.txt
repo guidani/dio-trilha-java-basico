@@ -1,0 +1,23 @@
+Materiais de Apoio
+ 
+
+Slides
+A apresentação completa utilizada durante o curso está disponível AQUI
+
+Com isso, você terá acesso a todos os slides e links explorados durante as aulas.
+
+ 
+GitHub
+Todo código-fonte desenvolvido durante o curso foi versionado no GitHub, no seguinte endereço:
+
+https://github.com/digitalinnovationone/trilha-java-basico
+
+ 
+
+Links úteis
+https://github.com/digitalinnovationone/trilha-java-basico/tree/main/gitbook/programacao-orientada-a-objetos
+https://www.youtube.com/watch?v=D4QfCGNq4Mc
+https://www.youtube.com/watch?v=Rpup6zDz0Wc
+ 
+
+Bons estudos!
