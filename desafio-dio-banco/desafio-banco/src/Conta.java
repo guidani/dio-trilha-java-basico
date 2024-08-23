@@ -1,29 +1,22 @@
+import lombok.Getter;
+
 public abstract class Conta implements IConta {
 
   private static final int AGENCIA_PADRA = 1;
   private static int SEQUENCIAL = 1;
 
   protected Cliente cliente;
-  protected int agencia;
-  protected int numero;
-  private double saldo;
+
+  protected @Getter int agencia;
+
+  protected @Getter int numero;
+
+  private @Getter double saldo;
 
   public Conta(Cliente cliente) {
     this.agencia = Conta.AGENCIA_PADRA;
     this.numero = SEQUENCIAL++;
     this.cliente = cliente;
-  }
-
-  public int getAgencia() {
-    return agencia;
-  }
-
-  public int getNumero() {
-    return numero;
-  }
-
-  public double getSaldo() {
-    return saldo;
   }
 
   @Override

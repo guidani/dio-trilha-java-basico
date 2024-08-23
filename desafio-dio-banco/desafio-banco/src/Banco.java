@@ -1,27 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+
+@Data
 public class Banco {
   private String nome;
   private double saldo = 1000000.0;
 
-  public double getSaldo() {
-    return saldo;
-  }
-
-  public void setSaldo(double saldo) {
-    this.saldo = saldo;
-  }
-
   protected List<Conta> contas = new ArrayList<>();
-
-  public String getNome() {
-    return nome;
-  }
-
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
 
   public void adicionarCliente(Conta conta) {
     this.contas.add(conta);
