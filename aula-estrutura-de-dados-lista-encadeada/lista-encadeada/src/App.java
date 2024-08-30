@@ -15,6 +15,19 @@ public class App {
         imprimeValores(no1);
         esvaziaLista(no1);
         imprimeValores(no1);
+
+        // No com generics
+        NoGeneric<String> ng1 = new NoGeneric<>("Olá");
+        NoGeneric<String> ng2 = new NoGeneric<>("Mundo");
+        NoGeneric<Integer> ng3 = new NoGeneric<>(1);
+        NoGeneric<Double> ng4 = new NoGeneric<>(1.1);
+        //
+        ng1.setProximoNo(ng2);
+        // Erro, pois o próximo Nó é do tipo String, o mesmo de ng2
+        // ng2.setProximoNo(ng3);
+        // Erro, pois o próximo Nó é do tipo Integer, o mesmo de ng3
+        // ng3.setProximoNo(ng4);
+
     }
 
     static void imprimeValores(No no) {
@@ -55,4 +68,5 @@ public class App {
         }
         return new No(null);
     }
+
 }
