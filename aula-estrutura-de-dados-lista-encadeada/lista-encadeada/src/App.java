@@ -27,7 +27,6 @@ public class App {
         // ng2.setProximoNo(ng3);
         // Erro, pois o próximo Nó é do tipo Integer, o mesmo de ng3
         // ng3.setProximoNo(ng4);
-
     }
 
     static void imprimeValores(No no) {
