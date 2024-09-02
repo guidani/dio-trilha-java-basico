@@ -1,13 +1,13 @@
 package main.java.one.digitalinnovation.filas;
 
-public class Fila {
-  private No head;
+public class Fila<T> {
+  private No<T> head;
 
   public Fila() {
     this.head = null;
   }
 
-  public Object first() {
+  public T first() {
     if (!this.isEmpty()) {
       No primeiroNo = head;
       while (true) {
@@ -17,12 +17,12 @@ public class Fila {
           break;
         }
       }
-      return primeiroNo.getObject();
+      return (T) primeiroNo.getObject();
     }
     return null;
   }
 
-  public Object dequeue() {
+  public T dequeue() {
     if (!this.isEmpty()) {
       No primeiroNo = head;
       No aux = head;
@@ -35,12 +35,12 @@ public class Fila {
           break;
         }
       }
-      return primeiroNo.getObject();
+      return (T) primeiroNo.getObject();
     }
     return null;
   }
 
-  public void enqueue(Object obj) {
+  public void enqueue(T obj) {
     No novoNo = new No(obj);
     novoNo.setRefNo(head);
     head = novoNo;

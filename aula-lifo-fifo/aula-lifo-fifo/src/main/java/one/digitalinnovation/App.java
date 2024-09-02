@@ -32,7 +32,7 @@ public class App {
     }
 
     static void testaFila() {
-        Fila f = new Fila();
+        Fila<String> f = new Fila<>();
         f.enqueue("A");
         f.enqueue("B");
         f.enqueue("C");
