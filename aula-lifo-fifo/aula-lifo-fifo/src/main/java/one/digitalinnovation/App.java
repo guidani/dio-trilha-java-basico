@@ -33,15 +33,15 @@ public class App {
 
     static void testaFila() {
         Fila f = new Fila();
-        f.enqueue(new main.java.one.digitalinnovation.filas.No("A"));
-        f.enqueue(new main.java.one.digitalinnovation.filas.No("B"));
-        f.enqueue(new main.java.one.digitalinnovation.filas.No("C"));
-        f.enqueue(new main.java.one.digitalinnovation.filas.No("D"));
+        f.enqueue("A");
+        f.enqueue("B");
+        f.enqueue("C");
+        f.enqueue("D");
 
         System.out.println(f);
         System.out.println(f.dequeue());
         System.out.println(f);
-        f.enqueue(new main.java.one.digitalinnovation.filas.No("E"));
+        f.enqueue("E");
         System.out.println(f);
         System.out.println(f.first());
         System.out.println(f);
