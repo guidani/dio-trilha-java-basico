@@ -24,9 +24,11 @@ public class App {
         // }
         // });
 
-        //Exemplo com função lambda
-        meusGatos.sort(Comparator.comparing(
-                (Gato g1) -> (g1.getIdade())));
+        // Exemplo com função lambda
+        // meusGatos.sort(Comparator.comparing((Gato g1) -> (g1.getIdade())));
+
+        // Exemplo com referenceMethod
+        meusGatos.sort(Comparator.comparing(Gato::getNome));
 
         System.out.println(meusGatos.toString());
     }
