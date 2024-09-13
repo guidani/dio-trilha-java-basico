@@ -42,6 +42,35 @@ mvn archetype:generate -DgroupId=one.digitalinnovation -DartifactId=quick-start-
 
 ## 3 - POM, dependências e repositórios
 
+- Nome do projeto
+- Dependências
+- Módulos
+- Configurações de build
+- Detalhes do projeto (nome, descrição, licença, url)
+- Configurações de ambiente (repositórios, tracking, profiles)
+
+O básico necessário
+
+```
+<project>
+  <modelVersion>4.0.8</modelVersion>
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1</version>
+</project>
+```
+Demais configurções que não foram definidas serão buscadas no SUPER POM [Link](https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html).
+
+Como adicionar dependências:
+
+```
+<dependency>
+  <groupId>org.hibernate.validator</groupId>
+  <artifactId>hibernate-validator</artifactId>
+  <version>7.0.1.Final<version>
+<dependency>
+```
+
 ## 4 - Gerenciando dependências
 
 ## 5 - Maven Build Lifecycle
