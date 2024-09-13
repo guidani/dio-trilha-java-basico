@@ -80,7 +80,7 @@ Tipos de dependências
 Transitividade e escopos
 - Escopos
   - classpath: runtime, test, compile
-  - compile: escopo default; Disponível em todos os classpath; é transitivo
+  - compile: escopo padrão; Disponível em todos os classpath; é transitivo
   - provided: Indica quea dependência será fornecida em tempo de execução por uma implementação na JDK ou via container; Exemplos: Servlet API, Java EE APIs; A dependência com esse escopo é adicionada no classpath usado para compilação(compile) e teste(test) mas não em runtime; Não é transitivo.
   - runtime: Indica que a dependência é necessária para a execução e não para a compilação; Maven inclui no classpath dos escopos de runtime e test.
   - test: Disponível apenas para compilação e execução dos testes; Não é transitivo.
@@ -92,6 +92,35 @@ Transitividade e escopos
 ## 6 - Projetos multi-módulos
 
 ## 7 - Plugins
+
+Mais utilizados
+- eclipse
+- jacoco
+- ear
+- war
+- compile
+- clean
+- checkstyle
+- javadoc
+
+Como instalar: ``mvn [plugin-name]:[goal-name]``
+
+Configuração (exemplo)
+
+```
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugins</artifactId>
+      <version>3.8.0</version>
+      <configuration>
+        <release>11</release>
+      </configuration>
+    </plugin>
+  </plugins>
+...
+```
 
 ## 8 - Conclusão
 
