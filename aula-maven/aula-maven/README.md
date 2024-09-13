@@ -73,6 +73,20 @@ Como adicionar dependências:
 
 ## 4 - Gerenciando dependências
 
+Tipos de dependências
+- Diretas: dependências declaradas no POM.xml
+- Transitiva: dependências obrigatórias das dependências declaradas no POM.xml
+
+Transitividade e escopos
+- Escopos
+  - classpath: runtime, test, compile
+  - compile: escopo default; Disponível em todos os classpath; é transitivo
+  - provided: Indica quea dependência será fornecida em tempo de execução por uma implementação na JDK ou via container; Exemplos: Servlet API, Java EE APIs; A dependência com esse escopo é adicionada no classpath usado para compilação(compile) e teste(test) mas não em runtime; Não é transitivo.
+  - runtime: Indica que a dependência é necessária para a execução e não para a compilação; Maven inclui no classpath dos escopos de runtime e test.
+  - test: Disponível apenas para compilação e execução dos testes; Não é transitivo.
+  - system: Similar ao escopo provided exceto por ser necessário prover o JAR explicitamente; A dependência com esse escopo é adicionado no classpath usado para compilação e teste mas não em runtime; Não é transitiva.
+  - import: é disponível apenas com uma dependência do tipo pom e com tag <dependencyManagement>; indica um processo de reutilizar dependências de um projeto.
+
 ## 5 - Maven Build Lifecycle
 
 ## 6 - Projetos multi-módulos
