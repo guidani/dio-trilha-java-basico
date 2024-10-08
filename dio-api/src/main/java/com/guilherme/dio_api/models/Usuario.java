@@ -17,4 +17,8 @@ public class Usuario {
                 ", login='" + login + '\'' +
                 '}';
     }
+
+    public Integer getId() {
+        return 0;
+    }
 }
