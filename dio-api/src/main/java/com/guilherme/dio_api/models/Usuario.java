@@ -19,6 +19,14 @@ public class Usuario {
     }
 
     public Integer getId() {
-        return 0;
+        return this.id;
+    }
+
+    public String getLogin() {
+        return this.login;
+    }
+
+    public String getPassword() {
+        return this.password;
     }
 }

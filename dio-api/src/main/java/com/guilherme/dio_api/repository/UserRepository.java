@@ -1,5 +1,6 @@
 package com.guilherme.dio_api.repository;
 
+import com.guilherme.dio_api.handler.BusinessException;
 import com.guilherme.dio_api.models.Usuario;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +10,13 @@ import java.util.List;
 @Repository
 public class UserRepository {
     public void save(Usuario usuario){
+        if(usuario.getLogin()== null){
+            throw new BusinessException("O campo de login é obrigatoris");
+        }
+
+        if(usuario.getPassword() == null){
+            throw new BusinessException("O campo senha é obrigatório");
+        }
         if(usuario.getId() == null){
             System.out.println("SAVE - recebendo o usuário na camada de repositório");
         } else {
