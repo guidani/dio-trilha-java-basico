@@ -18,12 +18,12 @@ public class AnimalController {
     private final AnimalRepository animalRepository = new AnimalRepository();
 
     @GetMapping()
-    public List<Animal> getAllAnimals(){
+    public List<Animal> getAllAnimals() {
         return animalRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public Animal getOneAnimal(@PathVariable("id") Integer id){
+    public Animal getOneAnimal(@PathVariable("id") Integer id) {
         return animalRepository.findById(id);
     }
 }
