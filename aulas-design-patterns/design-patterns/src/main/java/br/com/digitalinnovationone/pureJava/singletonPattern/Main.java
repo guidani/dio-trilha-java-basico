@@ -1,8 +1,4 @@
-package br.com.digitalinnovationone.pureJava;
-
-import br.com.digitalinnovationone.pureJava.singletonPattern.SingletonEager;
-import br.com.digitalinnovationone.pureJava.singletonPattern.SingletonLazy;
-import br.com.digitalinnovationone.pureJava.singletonPattern.SingletonLazyHolder;
+package br.com.digitalinnovationone.pureJava.singletonPattern;
 
 public class Main {
 
